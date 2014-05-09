@@ -21,9 +21,9 @@
 {% block page_title %}Inscriptions from {{ collection_title }}{% endblock page_title %}
 
 {% block content %}
+  <h3 style="text-align:center;">Total: {{ inscription_count }}</h3>
   <div id="main">
-    <div id="container">
-      <p>( Total: {{ inscription_count }} )</p>
+    <div id="container">    
       <ul class="collection">
         {% for member in inscriptions %}
         <li>

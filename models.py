@@ -135,14 +135,14 @@ class Collection(object):
         """ Queries solr for collection info. """
         payload = {
             u'q': collection,
-            u'fl': u'id,status,graphic_name',
+            u'fl': u'id,status,graphic_name,msid_idno',
             u'start': u'0',
             u'rows': u'99000',
             u'wt': u'json',
             u'indent': u'on', }
         r = requests.get( settings_app.SOLR_URL_BASE, params=payload )
         d = json.loads( r.content.decode(u'utf-8', u'replace') )
-        sorted_doc_list = sorted( d[u'response'][u'docs'], key=itemgetter(u'id') )  # sorts the doc-list on dict key 'id'
+        sorted_doc_list = sorted( d[u'response'][u'docs'], key=itemgetter(u'msid_idno') )  # sorts the doc-list on dict key 'id'
         return sorted_doc_list
 
     def enhance_solr_data( self, solr_data, url_scheme, server_name ):
