@@ -1,5 +1,10 @@
 _( formatted in [markdown](http://daringfireball.net/projects/markdown/) )_
 
+Note, this is now old, archived code -- for the new us-epigraphy code, see the github project [usepweb_project](https://github.com/Brown-University-Library/usepweb_project)
+========
+
+---
+
 About
 =====
 
